@@ -5,6 +5,10 @@ body {
     background-color: #e1f5fe;
 }
 
+.container {
+    margin-top: 10px;
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -80,14 +84,14 @@ td.is-selected.is-today {
 }
 
 .logo {
-    height: 5vh;
+    height: 60px;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-nav {
-    border: 3px solid #e1f5fe;
+.links {
+    margin: 0 0 0px 110;
 }
 
 
