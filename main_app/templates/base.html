@@ -15,11 +15,10 @@
     </style>
 </head>
 <body>
-    <header class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper blue darken-4">
-            <a href="{% url 'about' %}" id="title-header" class="brand-logo">Pet Health Tracker</a>
+    <nav>
+        <div class="nav-wrapper blue darken-4">
                 <div class="nav-wrapper">
+                    <a href="{% url 'about' %}" id="title-header" class="brand-logo">Pet Health Tracker</a>
                     <ul class="links right">
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'pets_create' %}">Add Pet</a></li>
@@ -32,9 +31,9 @@
                     </ul>
                     <img class="logo" src="https://github.com/haileylujah/Project-3-phtdb/blob/master/main_app/imgs/LOGO2.png?raw=true">
                 </div>
-            </div>
-        </nav>
-    </header>   
+        </div>
+
+    </nav>  
      <main class="container">
          {% block content %}
          {% endblock %}
