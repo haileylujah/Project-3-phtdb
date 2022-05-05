@@ -43,20 +43,6 @@
                 <p>Email:{{ vet.email }}</p>
                 <p>Phone Number:{{ vet.phone }}</p>
             </div>
-            <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a href="#">Prescriptions</a></li>
-                </ul>
-              </div>
-              <div class="card-content grey lighten-4">
-                <div id="test4">
-                    <form method="post" action="{% url 'add_checkup' pet.id %}">
-                        {% csrf_token %}
-                        {{ checkup_form.as_p }}
-                        <input type="submit" class="btn blue darken-4" value="Add Prescriptions">
-                    </form>
-                </div>
-              </div>
         </div>
     </div>
 </div>
@@ -67,7 +53,8 @@
                 {% for point in apidata %}
                     <div class="card">
                         <div class="card-content">
-                            <p>{{ point.dosage }} of {{ point.name }}. Refills: {{ point.refills }}</p>
+                            <p>Prescription:</p>
+                            <p>{{ point.dosage }} doses of {{ point.name }}. Refills: {{ point.refills }}</p>
                             {% comment %} API data is stored as objects in apidata. We need to know the information of a specific one. {% endcomment %}
                             {% comment %} They're stored in a list of objects.  So we should be able to: apidata[0][name] {% endcomment %}
                             <p>{{ point.generic.0 }} | {{ point.active.0 }} | {{ point.purpose.0 }} | {{ point.usage.0 }} | </p>
@@ -102,7 +89,6 @@
                     {% for photo in checkup_photos %}
                     <p>{{photo.checkup}}</p>
                     {% if photo.checkup == checks %}
-                    <p>WE GOT A TRUE!!!</p>
                     <img src="{{ photo.url }}">
                     {% endif %}
                     {% empty %}
