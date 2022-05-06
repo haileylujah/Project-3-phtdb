@@ -29,5 +29,7 @@ We are building the connection between vets and their clients.
 
 ## Next Steps
 * AAU (Vet):  After a surgery I want to set up the system to send them daily reminder emails to log in and track progress without my having to do anything else, for X number of days.  Because I'm busy and I want the info.
-* AAU (Client): When I update I want it to send an email to my vet, because it might be urgent.
 
+* AAU (Vet): I want my clients to rate how their pet is feeling 1-5 and I want that to be displayed in a graph so I can easily see progress.
+
+* AAU (Client): When I update I want it to send an email to my vet, because it might be urgent.
