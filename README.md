@@ -1,5 +1,6 @@
 # PHT the PET HEALTH TRACKER
 
+We are building the connection between vets and their clients.
 
 [Let's TRACK it out!](https://pethealthtracker.herokuapp.com/)
 
