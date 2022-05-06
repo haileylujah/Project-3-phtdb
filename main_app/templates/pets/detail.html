@@ -46,18 +46,18 @@
                 {% if group.name == 'client' %}
                     <div class="card-content">
                         <h2 class="center-align">Vet Info</h2>
-                        <p>Vet Name:{{ pet_vet.name }}</p>
-                        <p>Address:{{ pet_vet.address }}</p>
-                        <p>Email:{{ pet_vet.email }}</p>
-                        <p>Phone Number:{{ pet_vet.phone }}</p>
+                        <p>Vet Name: {{ pet_vet.name }}</p>
+                        <p>Address: {{ pet_vet.address }}</p>
+                        <p>Email: {{ pet_vet.email }}</p>
+                        <p>Phone Number: {{ pet_vet.phone }}</p>
                     </div>
                 {% elif group.name == 'vet' %}
                     <div class="card-content">
                         <h2 class="center-align">Client Info</h2>
-                        <p>Owner Name:{{ owner.first_name }} {{ owner.last_name}}</p>
-                        <p>Address:{{ owner_profile.address }}</p>
-                        <p>Email:{{ owner.email }}</p>
-                        <p>Phone Number:{{ owner_profile.phone }}</p>
+                        <p>Owner Name: {{ owner.first_name }} {{ owner.last_name}}</p>
+                        <p>Address: {{ owner_profile.address }}</p>
+                        <p>Email: {{ owner.email }}</p>
+                        <p>Phone Number: {{ owner_profile.phone }}</p>
                     </div>
                 {% else %}
                     <div class="card-content">
