@@ -67,26 +67,28 @@
                     </div>
                 {% endif %}
             {% endfor %}
-            <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a href="#">Prescriptions</a></li>
-                </ul>
-            </div>
-                <div class="card-content grey lighten-4">
-                    <div id="test4">
-                        <form method="post" action="{% url 'add_checkup' pet.id %}">
-                            {% csrf_token %}
-                            {{ checkup_form.as_p }}
-                            <input type="submit" class="btn blue darken-4" value="Add Prescriptions">
-                        </form>
-                    </div>
-                </div>
+
             </div>
     </div>
 </div>
+
+    <!-- <div class="card-content grey lighten-4">
+        <div id="test4">
+            <form method="post" action="{% url 'add_checkup' pet.id %}">
+                {% csrf_token %}
+                <input type="submit" class="btn blue darken-4" value="Add Prescriptions">
+            </form>
+        </div>
+    </div> -->
 <div class="card">
     <div class="col s4 ">
         <div class="card-content">
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><h5>Prescriptions</h5></li>
+                </ul>
+                <br>
+            </div>
             {% if pet.prescriptions.count %}
                 {% for point in apidata %}
                     <div class="card">
@@ -119,15 +121,15 @@
             {% if pet.checkup_set.count %}
             {% for checks in pet.checkup_set.all %}
                 <div class="card">
-                    <div class="card-action">
+                    <!-- <div class="card-action">
                         <a href="{% url 'checkup_update' checks.id %}">Edit</a>
                         <a href="{% url 'checkup_update' checks.id %}">Delete</a>
-                      </div> 
+                      </div>  -->
                 <div class="card-content">
                     
                     {% for photo in checkup_photos %}
                     {% if photo.checkup == checks %}
-                    <img src="{{ photo.url }}">
+                    <div class="cuphoto"><img src="{{ photo.url }}"></div>
                     {% endif %}
                     {% empty %}
                     <div class="card-panel blue-text center-align">No Photos Uploaded</div>
