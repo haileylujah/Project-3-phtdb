@@ -1,12 +1,11 @@
 # PHT the PET HEALTH TRACKER
 
-We will add some about here..
 
 [Let's TRACK it out!](https://pethealthtracker.herokuapp.com/)
 
 
 ## Screenshot
-![Homepage]()
+![Homepage](https://github.com/haileylujah/Project-3-phtdb/blob/master/main_app/imgs/Homepage.png?raw=true)
 
 
 ## Technologies Used
